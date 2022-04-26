@@ -78,3 +78,6 @@ public ArrayList(Collection<? extends E> c) {
 `````
 ## ArrayList类图
 <img src="./docs/ArrayList.png">
+
+## ArrayList方法详解
+<img src="">

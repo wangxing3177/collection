@@ -80,4 +80,4 @@ public ArrayList(Collection<? extends E> c) {
 <img src="./docs/ArrayList.png">
 
 ## ArrayList方法详解
-<img src="">
+<img src="./docs/ArrayList-method.png">

@@ -101,11 +101,11 @@ public boolean add(E e) {
 
 
 private void ensureCapacityInternal(int minCapacity) {
-    //如果是第一次添加元素，elementData的初始容量是10
+    //如果
     if (elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA) {
         minCapacity = Math.max(DEFAULT_CAPACITY, minCapacity);
     }
-    //确保数组容量足够
+
     ensureExplicitCapacity(minCapacity);
 }
 
@@ -113,25 +113,18 @@ private void ensureExplicitCapacity(int minCapacity) {
     modCount++;
 
     // overflow-conscious code
-    //如果存储数据需要的最小容量大于数组的长度，则需要进行扩容
     if (minCapacity - elementData.length > 0)
         grow(minCapacity);
 }
 
-/**
-* 增加容量以确保它至少可以容纳最小容量参数指定的元素数量
-*/
 private void grow(int minCapacity) {
     // overflow-conscious code
     int oldCapacity = elementData.length;
-    //新的容量是旧数组容量的1.5倍
     int newCapacity = oldCapacity + (oldCapacity >> 1);
-    //如果是第一次添加元素，oldCapacity和newCapacity都为0,所以需要将minCapacity（10）作为一个新的容量来扩容
     if (newCapacity - minCapacity < 0)
         newCapacity = minCapacity;
     if (newCapacity - MAX_ARRAY_SIZE > 0)
         newCapacity = hugeCapacity(minCapacity);
     // minCapacity is usually close to size, so this is a win:
-    //采用Arrays.copyOf()方法进行扩容，生成了一个新的elementData对象
     elementData = Arrays.copyOf(elementData, newCapacity);
 }

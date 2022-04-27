@@ -9,5 +9,7 @@ public class ArrayListTest {
         List objects = new ArrayList<>();
         objects.add(1);
         objects.add("s");
+
+
     }
 }

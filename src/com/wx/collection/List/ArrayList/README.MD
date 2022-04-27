@@ -135,3 +135,9 @@ private void grow(int minCapacity) {
     //采用Arrays.copyOf()方法进行扩容，生成了一个新的elementData对象
     elementData = Arrays.copyOf(elementData, newCapacity);
 }
+````
+## ArrayList总结
+1.ArrayList底层采用Object[]数组来存储数据，所以存储的数据是有序唯一的。
+2.ArrayList可以使用for,foreach(增强for),Iterator(迭代器)来遍历元素。
+3.ArrayList有3中构造函数，分别是无参构造函数，具有初始容量的构造函数，参数为集合的构造函数。
+4.ArrayList每次执行add方法都需要去确认数组是否还有容量，如果数组已满，则进行1.5倍扩容。

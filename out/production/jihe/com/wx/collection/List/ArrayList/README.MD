@@ -137,5 +137,8 @@ private void grow(int minCapacity) {
 }
 ````
 ## ArrayList总结
-1.ArrayList底层采用Object[]数组来存储数据，所以存储的数据是有序唯一的。
-2.
+1.ArrayList底层采用Object[]数组来存储数据，所以存储的数据是有序不唯一的。\
+2.ArrayList可以使用for,foreach(增强for),Iterator(迭代器)来遍历元素。\
+3.ArrayList有3中构造函数，分别是无参构造函数，具有初始容量的构造函数，参数为集合的构造函数。\
+4.ArrayList每次执行add方法都需要去确认数组是否还有容量，如果数组已满，则进行1.5倍扩容。\
+5.ArrayList查询慢，增删快，线程不安全，效率高。
